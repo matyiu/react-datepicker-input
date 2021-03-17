@@ -1,0 +1,32 @@
+.datepicker {
+    &-input {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        max-width: 220px;
+
+        input {
+            border-radius: 2px;
+            border: 2px solid rgb(78, 78, 78);
+            padding: 10px 34px 10px 10px;
+            font-size: 1.25rem;
+            cursor: pointer;
+            width: 100%;
+            outline: 0;
+
+            &:focus {
+                border-color: rgb(43, 111, 238);
+            }
+
+            &:focus + .fas {
+                color: rgb(43, 111, 238);
+            }
+        }
+
+        .fas {
+            position: absolute;
+            right: 10px;
+        }
+    }
+}
