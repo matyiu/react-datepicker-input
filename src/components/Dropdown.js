@@ -28,7 +28,7 @@ export const Dropdown = (props) => {
     });
 
     return (
-        <div className="dropdown-parent" ref={dropdownDom}>
+        <div className="dropdown-parent" ref={dropdownDom} data-open={open}>
             <div onClick={handleOpen}>
                 {trigger}
             </div>

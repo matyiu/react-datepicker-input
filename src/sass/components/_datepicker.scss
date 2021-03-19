@@ -15,11 +15,11 @@
             width: 100%;
             outline: 0;
 
-            &:focus {
+            [data-open="true"] & {
                 border-color: rgb(43, 111, 238);
             }
 
-            &:focus + .fas {
+            [data-open="true"] & + .fas {
                 color: rgb(43, 111, 238);
             }
         }
