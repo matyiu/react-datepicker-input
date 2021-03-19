@@ -50,7 +50,7 @@ const CalendarMonthControl = (props) => {
 }
 
 export const Calendar = (props) => {
-    const { currentDate } = props;
+    const { currentDate, onChange } = props;
 
     const [date, setDate] = useState(currentDate || new Date());
     const [month, setMonth] = useState(date);
@@ -72,7 +72,6 @@ export const Calendar = (props) => {
                 if ((y === 0 && x < getDayOfWeek(start)) ||
                     (y === (weeks - 1) && x > getDayOfWeek(end))) {
                     // Empty columns
-                    console.log('It should work');
                     dayCols.push(
                         <td></td>
                     );
@@ -82,7 +81,10 @@ export const Calendar = (props) => {
 
                     dayCols.push(
                         <td 
-                            onClick={() => setDate(day)}
+                            onClick={() => {
+                                setDate(day);
+                                onChange && onChange({target: {value: day}})
+                            }}
                             data-current={equalDate(current, date)}
                         >
                             {current.getDate()}
