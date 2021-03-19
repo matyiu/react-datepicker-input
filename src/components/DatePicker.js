@@ -1,4 +1,5 @@
 import React from 'react';
+import { Calendar } from './Calendar';
 import { Dropdown } from './Dropdown';
 
 const DatepickerInput = () => {
@@ -16,7 +17,7 @@ export const Datepicker = () => {
             <Dropdown trigger={
                 <DatepickerInput />
             }>
-                Here it goes a calendar to pick a date
+                <Calendar />
             </Dropdown>
         </div>
     );

@@ -1,0 +1,43 @@
+.calendar-container {
+    .calendar-month-control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 7px;
+
+            &:hover {
+                background: rgb(228, 228, 228);
+            }
+        }
+    }
+}
+
+.calendar {
+    width: 100%;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    tbody td[data-current] {
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            background: rgb(43, 111, 238);
+            color: white;
+            border-radius: 3px;
+        }
+    }
+
+    tbody td[data-current="true"] {
+        background: rgb(43, 111, 238);
+        color: white;
+        border-radius: 3px;
+    }
+}
